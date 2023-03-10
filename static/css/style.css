@@ -23,6 +23,28 @@
   height: 30px;
 }
 
+.page h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.page header {
+  position: relative;
+}
+
+.page header button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+}
+
+.page header img {
+  height: 25px;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -32,10 +54,11 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  padding: 20px;
   background-color: #F6F6F6;
 }
 
-.visuallyhidden {
+.visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -48,6 +71,6 @@ body {
 
 /*
 Bron: https://stackoverflow.com/questions/1755656/displaynone-vs-visibilityhidden-vs-text-indent9999-how-screen-reader-behave-w
-Zorg ervoor dat deze tekst wel wordt voorgelezen door screenreaders maar niet wordt gezien door het oog van de gebruiker
+Zorg ervoor dat deze tekst wel wordt voorgelezen door screen readers maar niet wordt gezien door het oog van de gebruiker
 */
 /*# sourceMappingURL=style.css.map */
