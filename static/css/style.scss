@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./houses";
 @import "./breakpoints";
 
 * {
@@ -12,3 +13,18 @@ body {
     background-color: $background-1;
 }
 
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+Bron: https://stackoverflow.com/questions/1755656/displaynone-vs-visibilityhidden-vs-text-indent9999-how-screen-reader-behave-w
+Zorg ervoor dat deze tekst wel wordt voorgelezen door screenreaders maar niet wordt gezien door het oog van de gebruiker
+*/
