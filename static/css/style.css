@@ -1,1 +1,12 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #F6F6F6;
+}
+/*# sourceMappingURL=style.css.map */
