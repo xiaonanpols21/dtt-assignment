@@ -1,0 +1,31 @@
+{
+  "name": "dtt-assignment",
+  "version": "1.0.0",
+  "description": "DTT Assignment",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaonanpols21/dtt-assignment.git"
+  },
+  "keywords": [
+    "dtt",
+    "housing",
+    "node"
+  ],
+  "author": "Xiao Nan Pols",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xiaonanpols21/dtt-assignment/issues"
+  },
+  "homepage": "https://github.com/xiaonanpols21/dtt-assignment#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
