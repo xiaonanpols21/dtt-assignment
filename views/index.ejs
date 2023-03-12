@@ -11,23 +11,49 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <section class="page houses">
         <h2 class="visually-hidden">Houses</h1>
         <header>
             <h1>Houses</h2>
             <button aria-label="Plus"><img src="img/ic_plus_grey@3x.png" alt="Plus button"></button>
+            <button>Create new</button>
         </header>
         <form class="search-bar" action="">
             <label for="site-search"></label>
-            <input type="search" id="site-search" name="housing" placeholder="Search housing">
+            <input type="search" id="site-search" name="housing" placeholder="Search for a house">
         </form>
-        <div>
+        <div class="filter">
             <button>Price</button>
             <button>Size</button>
         </div>
         <section class="houses-list">
             <h2 class="visually-hidden">Houses list</h2>
+            <article>
+                <h3>Stokvisstraat 132</h3>
+                <p>€ 500.000</p>
+                <p>1011AA Amsterdam</p>
+                <ul>
+                    <li><img src="img/ic_bed@3x.png" alt="Bedroom">1</li>
+                    <li><img src="img/ic_bath@3x.png" alt="Bathroom">1</li>
+                    <li><img src="img/ic_size@3x.png" alt="Size">120 m2</li>
+                </ul>
+                <img class="placeholder-img" src="img/img_placeholder_house@3x.png" alt="Placeholder house">
+                <div class="edit-delete">
+                    <button><img src="img/ic_edit@3x.png" alt="Edit"></button>
+                    <button><img src="img/ic_delete@3x.png" alt="Delete"></button>
+                </div>
+            </article>
+            <article>
+                <h3>Stokvisstraat 132</h3>
+                <p>€ 500.000</p>
+                <p>1011AA Amsterdam</p>
+                <ul>
+                    <li><img src="img/ic_bed@3x.png" alt="Bedroom">1</li>
+                    <li><img src="img/ic_bath@3x.png" alt="Bathroom">1</li>
+                    <li><img src="img/ic_size@3x.png" alt="Size">120 m2</li>
+                </ul>
+                <img class="placeholder-img" src="img/img_placeholder_house@3x.png" alt="Placeholder house">
+            </article>
             <article>
                 <h3>Stokvisstraat 132</h3>
                 <p>€ 500.000</p>
@@ -45,6 +71,14 @@
     <nav class="mobile-nav">
         <button><img src="img/ic_mobile_navigarion_home_active@3x.png" alt="Active home button"></button>
         <button><img src="img/ic_mobile_navigarion_info@3x.png" alt="Information button"></button>
+    </nav>
+
+    <nav class="desktop-nav">
+        <ul>
+            <li><a href=""><img src="img/img_logo_dtt@3x.png" alt="DTT"></a></li>
+            <li><a href="">Houses</a></li>
+            <li><a href="">About</a></li>
+        </ul>
     </nav>
 
     <script type="module" src="js/main.js"></script>

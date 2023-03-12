@@ -12,6 +12,7 @@ $background-2: #FFFFFF;
 
 $white : #FFFFFF;
 
+$text-primary: #000000;
 $text-secondary: #4A4B4C;
 
 $font-input: 12px;
@@ -42,4 +43,17 @@ $font-input: 12px;
     display: flex;
     flex-direction: $direction;
     gap: $gap;
+}
+
+@mixin grid($clmns, $gap) {
+    display: grid;
+    grid-template-columns: $clmns;
+    gap: $gap;
+}
+
+@mixin button-1 {
+    padding: 15px 20px;
+    background-color: $primary;
+    border-radius: 10px;
+    color: $white;
 }

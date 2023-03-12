@@ -1,3 +1,7 @@
+body {
+  padding: 20px;
+}
+
 .mobile-nav {
   position: fixed;
   left: 0;
@@ -21,6 +25,48 @@
 
 .mobile-nav img {
   height: 30px;
+}
+
+.desktop-nav {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 100px;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 10px 30px rgba(74, 75, 76, 0.1);
+          box-shadow: 0px 10px 30px rgba(74, 75, 76, 0.1);
+  z-index: 1;
+}
+
+.desktop-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.desktop-nav ul li:nth-of-type(2) a {
+  font-weight: bold;
+  color: #000000;
+}
+
+.desktop-nav img {
+  height: 40px;
+}
+
+.desktop-nav a {
+  color: #C3C3C3;
 }
 
 .page h1 {
@@ -56,13 +102,13 @@
   gap: 20px;
 }
 
-.houses div {
+.filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.houses div button {
+.filter button {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: bold;
@@ -74,7 +120,7 @@
   color: #FFFFFF;
 }
 
-.houses div button:last-of-type {
+.filter button:last-of-type {
   background-color: #C3C3C3;
   border-radius: 0px 10px 10px 0px;
 }
@@ -121,6 +167,17 @@
         */
 }
 
+.houses-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
 .houses-list h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -135,11 +192,12 @@
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
   gap: 5px 15px;
+  position: relative;
   padding: 20px;
   background-color: #FFFFFF;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 30px rgba(74, 75, 76, 0.3);
-          box-shadow: 0px 0px 30px rgba(74, 75, 76, 0.3);
+  -webkit-box-shadow: 0px 0px 30px rgba(74, 75, 76, 0.1);
+          box-shadow: 0px 0px 30px rgba(74, 75, 76, 0.1);
 }
 
 .houses-list article p:last-of-type {
@@ -183,6 +241,133 @@
      object-fit: cover;
 }
 
+.edit-delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.edit-delete button {
+  border: none;
+  background: none;
+}
+
+.edit-delete img {
+  height: 20px;
+}
+
+@media (max-width: 992px) {
+  .desktop-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    padding: 20px 100px;
+    padding-top: calc(84.5px + 50px);
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .page h1 {
+    font-size: 32px;
+    text-align: left;
+  }
+  .page header {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .page header button:first-of-type {
+    display: none;
+  }
+  .page header button:last-of-type {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 15px 20px;
+    background-color: #EB5440;
+    border-radius: 10px;
+    color: #FFFFFF;
+    padding: 15px 20px 15px 50px;
+    font-size: 18px;
+    text-transform: uppercase;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .page header button:last-of-type::after {
+    content: "";
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    top: 50%;
+    left: 20px;
+    position: absolute;
+    right: 1.25em;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/ic_plus_white@3x.png);
+    background-size: contain;
+    z-index: 1;
+  }
+  .houses {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 30px 0px;
+  }
+  .houses-list {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .houses-list h3 {
+    font-size: 22px;
+  }
+  .houses-list article {
+    -ms-grid-columns: 200px 1fr;
+        grid-template-columns: 200px 1fr;
+    gap: 10px 20px;
+    font-size: 16px;
+  }
+  .houses-list ul {
+    gap: 20px;
+  }
+  .houses-list ul img {
+    height: 20px;
+  }
+  .search-bar input {
+    width: 80%;
+    font-size: 14px;
+  }
+  .filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .filter button {
+    width: 200px;
+    font-size: 18px;
+  }
+  .placeholder-img {
+    grid-row-end: 6;
+    height: 200px;
+  }
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -192,7 +377,6 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  padding: 20px;
   background-color: #F6F6F6;
 }
 
@@ -213,5 +397,9 @@ Zorg ervoor dat deze tekst wel wordt voorgelezen door screen readers maar niet w
 */
 ul li {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

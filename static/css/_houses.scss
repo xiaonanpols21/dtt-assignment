@@ -1,3 +1,7 @@
+body {
+    padding: 20px;
+}
+
 .mobile-nav {
     position: fixed;
     left: 0;
@@ -16,6 +20,40 @@
 
     img {
         height: 30px;
+    }
+}
+
+.desktop-nav {
+    font-family: $font-sec;
+    font-weight: 500;
+    font-size: 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 100px;
+    background-color: $background-2;
+    box-shadow: 0px 10px 30px rgba($secondary, 0.1);
+    z-index: 1;
+
+    ul {
+        @include flex(row, 50px);
+        align-items: center;
+
+        li:nth-of-type(2) {
+            a {
+                font-weight: bold;
+                color: $text-primary;
+            }
+        }
+    }
+
+    img {
+        height: 40px;
+    }
+
+    a {
+        color: $tertiory-2;
     }
 }
 
@@ -44,23 +82,23 @@
 
 .houses {
     @include flex(column, 20px);
-    
-    div {
-        display: flex;
+}
 
-        button {
-            @include buttons-tabs;
-            width: 100%;
-            padding: 10px;
-            border: none;
-            background-color: $primary;
-            border-radius: 10px 0px 0px 10px;
-            color: $white;
-            
-            &:last-of-type {
-                background-color: $tertiory-2;
-                border-radius: 0px 10px 10px 0px;
-            }
+.filter {
+    display: flex;
+
+    button {
+        @include buttons-tabs;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: $primary;
+        border-radius: 10px 0px 0px 10px;
+        color: $white;
+        
+        &:last-of-type {
+            background-color: $tertiory-2;
+            border-radius: 0px 10px 10px 0px;
         }
     }
 }
@@ -108,19 +146,20 @@
 }
 
 .houses-list {
+    @include flex(column, 20px);
+
     h3 {
         @include header-2;
     }
 
     article {
         @include listing-info;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 5px 15px;
+        @include grid(1fr 2fr, 5px 15px);
+        position: relative;
         padding: 20px;
         background-color: $background-2;
         border-radius: 10px;
-        box-shadow: 0px 0px 30px rgba($secondary, 0.3);
+        box-shadow: 0px 0px 30px rgba($secondary, 0.1);
 
         p:last-of-type {
             color: $tertiory-2;
@@ -150,4 +189,19 @@
     height: 100%;
     border-radius: 10px;
     object-fit: cover;
+}
+
+.edit-delete {
+    @include flex(row, 10px);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    button {
+        border: none;
+        background: none;
+    }
+    img {
+        height: 20px;
+    }
 }

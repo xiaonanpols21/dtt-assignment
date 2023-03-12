@@ -10,7 +10,6 @@
 
 body {
     font-family: $font-stack;
-    padding: 20px;
     background-color: $background-1;
 }
 
@@ -32,4 +31,8 @@ Zorg ervoor dat deze tekst wel wordt voorgelezen door screen readers maar niet w
 
 ul li {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
 }

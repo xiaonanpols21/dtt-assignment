@@ -9,7 +9,112 @@
 }
 
 // Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+    .desktop-nav {
+        display: none;
+    }
+}
+
 @media (min-width: 992px) { 
+    body {
+        padding: 20px 100px;
+        padding-top: calc(84.5px + 50px);
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .page {
+        h1 {
+            font-size: 32px;
+            text-align: left;
+        }
+
+        header {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            button {
+                &:first-of-type {
+                    display: none;
+                }
+
+                &:last-of-type {
+                    @include buttons-tabs;
+                    @include button-1;
+                    padding: 15px 20px 15px 50px;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    &::after {
+                        content: "";
+                        transform: translateY(-50%);
+                        top: 50%;
+                        left: 20px;
+                        position: absolute;
+                        right: 1.25em;
+                        width: 20px;
+                        height: 20px;
+                        background-image: url(../img/ic_plus_white@3x.png);
+                        background-size: contain;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .houses {
+        @include grid(1fr 1fr, 30px 0px);
+    }
+
+    .houses-list {
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        h3 {
+            font-size: 22px;
+        }
+
+        article {
+            grid-template-columns: 200px 1fr;
+            gap: 10px 20px;
+            font-size: 16px;
+        }
+
+        ul {
+            gap: 20px;
+
+            img {
+                height: 20px;
+            }
+        }
+    }
+
+    .search-bar {
+        input {
+            width: 80%;
+            font-size: 14px;
+        }
+    }
+
+    .filter {
+        display: flex;
+        justify-content: flex-end;
+        
+        button {
+            width: 200px;
+            font-size: 18px;
+        }
+    }
+
+    .placeholder-img {
+        grid-row-end: 6;
+        height: 200px;
+    }
 
 }
 
