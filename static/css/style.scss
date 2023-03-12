@@ -29,3 +29,7 @@ body {
 Bron: https://stackoverflow.com/questions/1755656/displaynone-vs-visibilityhidden-vs-text-indent9999-how-screen-reader-behave-w
 Zorg ervoor dat deze tekst wel wordt voorgelezen door screen readers maar niet wordt gezien door het oog van de gebruiker
 */
+
+ul li {
+    list-style: none;
+}

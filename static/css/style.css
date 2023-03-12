@@ -42,7 +42,145 @@
 }
 
 .page header img {
-  height: 25px;
+  height: 20px;
+}
+
+.houses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.houses div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.houses div button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #EB5440;
+  border-radius: 10px 0px 0px 10px;
+  color: #FFFFFF;
+}
+
+.houses div button:last-of-type {
+  background-color: #C3C3C3;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search-bar::after {
+  content: "";
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  left: 20px;
+  position: absolute;
+  right: 1.25em;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/ic_search@3x.png);
+  background-size: contain;
+  z-index: 1;
+}
+
+.search-bar input {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  width: 100%;
+  padding: 20px 20px 20px 60px;
+  border-radius: 10px;
+  border: none;
+  background-color: #E8E8E8;
+  /*
+        &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+            height: 1em;
+            width: 1em;
+            border-radius: 50em;
+            background: url(../img/ic_clear@3x.png) no-repeat 50% 50%;
+            background-size: contain;
+            opacity: 0;
+            pointer-events: none;
+        }
+        FIXME: Een eigen x button
+        */
+}
+
+.houses-list h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.houses-list article {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4A4B4C;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  gap: 5px 15px;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 30px rgba(74, 75, 76, 0.3);
+          box-shadow: 0px 0px 30px rgba(74, 75, 76, 0.3);
+}
+
+.houses-list article p:last-of-type {
+  color: #C3C3C3;
+}
+
+.houses-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.houses-list ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.houses-list ul img {
+  height: 15px;
+}
+
+.placeholder-img {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 6;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 * {
@@ -73,4 +211,7 @@ body {
 Bron: https://stackoverflow.com/questions/1755656/displaynone-vs-visibilityhidden-vs-text-indent9999-how-screen-reader-behave-w
 Zorg ervoor dat deze tekst wel wordt voorgelezen door screen readers maar niet wordt gezien door het oog van de gebruiker
 */
+ul li {
+  list-style: none;
+}
 /*# sourceMappingURL=style.css.map */
